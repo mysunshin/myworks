@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        *{
+            padding:0;
+            margin: 0;
+        }
+        
+        html,body{
+            font-size:100px;
+            font-family: "微软雅黑";
+            line-height: 300px;
+            text-align: center;
+        }
+        
+        .test-boss{
+            width:300px;
+            height:300px;
+            transform-style: preserve-3d;
+            transform: perspective(800px);
+            position:relative;
+            transition: transform 10s linear 0s;
+            margin-top: 200px;
+            margin-left: 200px;
+           
+            
+            
+        }
+       .test-boss .test{
+            width:300px;
+            height:300px;
+            position:absolute;
+            top:0;
+            left:0;
+        }    
+        
+        
+        .test:nth-child(1){
+            background:rgba(73,16,238, 0.3);
+            transform:translateZ(-150px);
+        }
+        
+        .test:nth-child(2){
+            background:rgba(50,227,200, 0.3);
+            transform:translateZ(150px);
+        }
+        
+        .test:nth-child(3){
+            background:rgba(54,185,37, 0.3);
+            transform:translateX(-150px) rotatey(90deg);
+        }
+        .test:nth-child(4){
+            background:rgba(48,220,35, 0.3);
+            transform:translateX(150px) rotatey(90deg);
+        }
+        
+         .test:nth-child(5){
+            background:rgba(44,185,37, 0.3);
+            transform:translateY(-150px) rotatex(90deg);
+        }
+         .test:nth-child(6){
+            background:rgba(220,200,35, 0.3);
+            transform:translateY(150px) rotatex(90deg);
+        }
+        
+        
+        
+        .test-boss:hover{
+            transform: rotate3d( 1,1,1,180deg)
+        }
+    </style>
+</head>
+<body>
+   <div class="test-boss">
+   <div class="test">you</div> 
+   <div class="test">are</div>
+   <div class="test">my</div>
+   <div class="test">only</div>
+   <div class="test">one</div>
+   <div class="test">呵呵哒</div>
+   </div>
+</body>
+</html>

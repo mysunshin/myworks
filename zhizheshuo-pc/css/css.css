@@ -1,0 +1,115 @@
+* { margin: 0; padding: 0; }
+
+html, body { font-size: 62.5%; font-family: "Microsoft YaHei"; }
+
+input { border: none; outline: none; }
+
+.test { width: 100%; height: 30px; background: #666666; }
+
+.bar { width: 1201px; height: 30px; margin: 0 auto; }
+
+.bar_left { width: 470px; height: 30px; float: left; }
+
+spand { display: block; line-height: 31px; margin: 0 13px; color: #ffffff; float: left; font-size: 12px; }
+
+.bar_right { width: 120px; height: 30px; float: right; }
+
+.test_one { width: 100%; height: 80px; }
+
+.see { width: 1201px; height: 80px; margin: 0 auto; }
+
+.center_left { width: 450px; height: 80px; float: left; }
+
+.center_right { width: 475px; height: 80px; float: right; }
+
+.icon { width: 140px; height: 80px; background: url("../images/icon.png") no-repeat center right; float: left; }
+
+.icon_right { width: 310px; height: 80px; float: right; }
+
+.line { line-height: 80px; color: #666666; }
+
+.seek { width: 320px; height: 80px; float: left; }
+
+.code { width: 130px; height: 80px; background: url("../images/code.png") no-repeat right; float: right; }
+
+.seek_one { width: 310px; height: 32px; margin-top: 25px; }
+
+.seek_two { width: 263px; height: 32px; border: 1px solid #666; border-top-left-radius: 2px; border-bottom-left-radius: 2px; float: left; padding-left: 10px; }
+
+.seek_icon { width: 35px; height: 34px; background: #666; background-image: url("../images/seek.png"); background-repeat: no-repeat; background-position: center; float: right; }
+
+.banner { width: 100%; height: 350px; background: url("../images/banner.png") no-repeat center; }
+
+.font { width: 1201px; height: 1650; margin: 0 auto; }
+
+.font_bos { width: 918px; height: 270px; float: left; }
+
+.font_right { width: 266px; height: 900px; float: right; }
+
+.spand_font { width: 918px; height: 56px; color: #9f9f9f; font-size: 16px; line-height: 56px; text-align: left; border-bottom: 1px dashed #d5d5d5; }
+
+.font-img { width: 918px; height: 210px; background: #f7f7f7; border-bottom: 1px dashed #d5d5d5; }
+
+.nums { width: 918px; height: 329px; background: #f7f7f7; }
+
+.img-one { width: 238px; height: 212px; background: url("../images/person.png") no-repeat left; float: left; }
+
+.img-two { width: 238px; height: 212px; background: url("../images/puzzle.png") no-repeat left; float: left; }
+
+.img-three { width: 238px; height: 212px; background: url("../images/people.png") no-repeat left; float: left; }
+
+.img-four { width: 238px; height: 212px; background: url("../images/hand.png") no-repeat left; float: left; }
+
+.img-fift { width: 238px; height: 212px; background: url("../images/wash.png") no-repeat left; float: left; }
+
+.img-six { width: 238px; height: 212px; background: url("../images/screw.png") no-repeat left; float: left; }
+
+.font-box { width: 680px; height: 212px; float: right; }
+
+.font-bar { width: 680px; height: 57px; color: #9f9f9f; font-size: 16px; line-height: 57px; }
+
+.font-bar_one { width: 212px; height: 40px; color: #cbcbcb; font-size: 14px; float: left; }
+
+.font-time { width: 465px; height: 40px; color: #cbcbcb; font-size: 14px; float: right; }
+
+.font-nei { width: 680px; height: 95px; margin-top: 40px; color: #9f9f9f; font-size: 14px; }
+
+.font-bar_d { width: 266px; height: 50px; padding-top: 20px; }
+
+.spand_bar { width: 103px; height: 33px; background: #6663ab; color: #ffffff; font-size: 14px; text-align: center; line-height: 33px; border-radius: 4px; margin: 0 auto; }
+
+.list { width: 266px; height: 250px; }
+
+.list_ { width: 80px; height: 30px; background: #ededf9; border-radius: 4px; color: #6663ab; text-align: center; line-height: 30px; font-size: 14px; margin: 10px 8px 12px 0px; float: left; }
+
+.tougao { width: 266px; height: 31px; padding-top: 30px; }
+
+.test01 { width: 246px; height: 31px; line-height: 31px; color: #ffffff; font-size: 14px; background: #b2b2b2; padding-left: 20px; }
+
+.test02 { width: 50px; height: 31px; float: right; }
+
+.list_font { width: 265px; height: 520px; background: #ffffff; border: 1px solid #d6d6d6; }
+
+.list_s { width: 266px; height: 50px; color: #666666; font-size: 12px; text-align: center; line-height: 50px; border-bottom: 1px dashed #d9d9d9; }
+
+.bottom { width: 100%; height: 1650px; }
+
+.bottom_l { width: 100%; height: 350px; background: #333333; }
+
+.bottom_c { width: 1201px; height: 350px; margin: 0 auto; }
+
+.up { width: 1201px; height: 207px; }
+
+.down { width: 1201px; height: 53px; text-align: center; line-height: 20px; padding-top: 90px; }
+
+.up_left { width: 124px; height: 110px; line-height: 25px; background-image: url("../images/phoen.png"); background-repeat: no-repeat; background-position: center; float: left; padding-left: 160px; padding-top: 90px; }
+
+.center_t { width: 158px; height: 200px; float: left; }
+
+.up_right { width: 284px; height: 200px; background: url("../images/code02.png") no-repeat left bottom; float: right; }
+
+.center_tup { width: 158px; height: 83px; text-align: center; line-height: 83px; color: #6663ab; font-size: 18px; float: left; }
+
+.center_ddown { width: 158px; height: 124px; text-align: center; line-height: 30px; color: #b2b2b2; font-size: 14px; float: left; }
+
+/*# sourceMappingURL=css.css.map */

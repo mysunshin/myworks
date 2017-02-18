@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        .test{
+            width:800px;
+            height:500px;
+            text-align: center;
+            line-height: 500px;
+            color: #fff;
+            font-size: 50px;
+            position: relative;
+            cursor: pointer;
+        }
+        
+        .img{
+            width:800px;
+            height:500px;
+            float:left;
+            position: absolute;
+            left:0;
+            top:0;
+        }
+        
+        .img:nth-child(1){
+            background:url("images/1.jpeg") center;
+        }
+        
+        .img:nth-child(2){
+            background:url("images/4.jpg") center;
+        }
+        .img:nth-child(3){
+            background:url(images/5.jpeg) center;
+        }
+        .img:nth-child(4){
+            background:url(images/7.jpeg) center;
+        }
+        
+        .left{
+            width:50px;
+            height:50px;
+            color:#fff;
+            font-size: 50px;
+            position: absolute;
+            top:0;
+            left: 0;
+        }
+
+        .right{
+            width:50px;
+            height:50px;
+            color:#fff;
+            font-size: 50px;
+            position: absolute;
+            top:0;
+            right:0;
+        }
+
+        .yuand{
+            width:100px;
+            height:20px;
+            position: absolute;
+            bottom: 20px;
+            left:35%;
+        }
+        
+        .c{
+            width:14px;
+            height:14px;
+            float:left;
+            background:#fff;
+            margin: 0 2px;
+            border-radius: 7px;
+            -webkit-border-radius:7px;
+            -ms-border-radius:7px;
+            -moz-border-radius:7px;
+            -o-border-radius:7px;
+        }
+        
+        .c.h{
+            background:black;
+        }
+        
+    </style>
+</head>
+<body>
+   <div class="test">
+       <div class="img">1</div>
+       <div class="img">2</div>
+       <div class="img">3</div>
+       <div class="img">4</div>
+       <div class="left"><</div>
+       <div class="right">></div>
+       <div class="yuand">
+           <div class="c h"></div>
+           <div class="c"></div>
+           <div class="c"></div>
+           <div class="c"></div>
+       </div>
+   </div> 
+</body>
+</html>
+<script src="js/jquery.min.js"></script>
+<script>
+$(function(){
+    var i=0;
+    var set;
+    $(".img").eq(i).show(1000).siblings(".img").hide(0);
+    $(".c").eq(i).addClass("h").siblings(".c").removeClass("h"); 
+    function time(){
+        set=setInterval(function(){
+            if(i<3){
+                i++;
+            }else{
+                i=0;
+            }
+            $(".img").eq(i).show(1000).siblings(".img").hide(0);
+            $(".c").eq(i).addClass("h").siblings(".c").removeClass("h"); 
+        },3000)
+    }
+    time();
+    
+    $(".test").mouseover(function(){
+        clearInterval(set);
+    });
+    $(".test").mouseleave(function(){
+        time();
+    });
+    
+    $(".left").click(function(){
+            if(i>0){
+                i--;
+            }else{
+                i=3;
+            }
+       $(".img").eq(i).show(1000).siblings(".img").hide(0);
+        $(".c").eq(i).addClass("h").siblings(".c").removeClass("h"); 
+    })
+    
+    
+    $(".right").click(function(){
+            if(i<3){
+                i++;
+            }else{
+                i=0;
+            }
+        $(".img").eq(i).show(1000).siblings(".img").hide(0);
+        $(".c").eq(i).addClass("h").siblings(".c").removeClass("h"); 
+    })
+    
+    
+    $(".c").mouseover(function(){
+     i=$(this).index();
+    $(".img").eq(i).show(1000).siblings(".img").hide(0);
+     $(this).addClass("h").siblings(".c").removeClass("h"); 
+    })
+    
+    
+    
+    
+})
+
+
+</script>

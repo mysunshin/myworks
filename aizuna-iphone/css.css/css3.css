@@ -1,0 +1,175 @@
+*{
+    padding: 0px;
+    margin: 0px;
+}
+
+
+
+html,body{
+    font-family: "微软雅黑";
+    background:#f2f2f2;
+}
+
+
+input{
+    border:none;
+    outline: none;
+}
+
+
+
+.test{
+    width:auto;
+    height:41px;
+    background:#43ccf0;
+    text-align: center;
+    line-height: 41px;
+    font-size: 16px;
+    color: #fff;
+    overflow: hidden;
+    
+}
+
+
+.huadong{
+    width:20px;
+    height: 20px;
+    background:url("../images/1.png")no-repeat right;
+    float: left;
+    margin-top: 10px;
+}
+
+.strat{
+    width:auto;
+    height:131px;
+    background:#ffffff;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #dfdfdf;
+    
+}
+
+.pay_{
+    width:auto;
+    height:40px;
+}
+
+.pay{
+    width:auto;
+    height:40px;
+    line-height: 40px;
+    color: #333333;
+    font-size:15px;
+    margin: 0px 20px;
+}
+
+.box-one{
+    width:auto;
+    height:26px;
+    margin: 0px 20px;
+}
+
+.font{
+    width:60px;
+    height:26px;
+    line-height: 26px;
+    font-size: 12px;
+    color:#555555;
+    float:left;
+}
+
+.font-one{
+    width:auto;
+    height:26px;
+    margin-left:60px;
+    line-height: 26px;
+    font-size: 12px;
+    color: #999999;
+}
+
+.one{
+    text-align: right;
+}
+
+
+.center{
+    width:auto;
+    height:168px;
+    background:#ffffff;
+    border-bottom: 1px solid #e0e0e0;
+    margin-bottom: 20px;
+}
+
+.pay_one{
+    border-bottom: 1px solid #e2e2e2;
+}
+
+.box{
+    width:auto;
+    height:63px;
+    border-bottom: 1px solid #e2e2e2;
+}
+
+.box-two{
+    width:auto;
+    height:63px;
+    margin: 0 10px 0px 20px;
+}
+
+.left{
+    width:42px;
+    height:63px;
+    background:url("../images/weixin.png")no-repeat center;
+    float: left;
+    margin-right: 10px;
+}
+
+.left_{
+    background:url("../images/zhifu.png")no-repeat center;
+}
+
+.right{
+    width:auto;
+    height:63px;
+}
+
+.right-one{
+    width:auto;
+    height:33px;
+    color:#555555;
+    font-size: 15px;
+    line-height: 45px;
+}
+
+.right-two{
+    width:auto;
+    height:30px;
+    font-size: 12px;
+    color:#999999;
+    
+}
+
+.right-right{
+    width:20px;
+    height:63px;
+    background: url("../images/quan.png")no-repeat center;
+    float: right;
+}
+.h{
+    background: url("../images/true.png")no-repeat center;
+}
+
+.last-box{
+    width:auto;
+    height:40px;
+    background: #43ccf0;
+    color: #fff;
+    text-align: center;
+    line-height: 40px;
+    margin: 0 20px;
+    font-size: 16px;
+    border-radius: 4px;
+    -webkit-border-radius: 4px;
+    -o-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -ms-border-radius: 4px;
+}

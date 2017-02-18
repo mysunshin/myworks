@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>另付房租办理</title>
+    <link rel="stylesheet" href="css.css/css2.css">
+</head>
+<body>
+    <div class="test">爱租哪&nbsp;&nbsp;&nbsp;
+    <div class="huadong"></div>
+    </div>
+    
+    
+     <div class="test-first">
+        <div class="img fr">
+            <div class="img-three"></div>
+            <span>审核</span>
+        </div>
+        <div class="img  fl">
+            <div class="img-one">
+                <div class="true"></div>
+            </div>
+            <span>身份信息</span>
+        </div>
+        <div class="img img_two">
+            <div class="yellow"></div>
+            <span>租房资料</span>
+        </div> 
+            <div class="arrow-con">
+                <div class="arrow"></div>
+                <div class="arrow-one"></div>
+            </div>
+    </div>
+    
+    
+    <div class="center-s">
+        <div class="center-one two">姓名
+        <input type="text" class="test1 bold" value="请输入姓名">
+        </div>
+        <div class="center-one mon">证件号
+        <input type="text" class="test1 bold"  placeholder="请输入身份证号码">
+        </div>
+        <div class="center-one zujin">银行卡号
+        <input type="text" class="test1 bold"  placeholder="请输入常用银行卡卡号">
+        </div>
+         
+       
+        <div class="fangkuang fr">
+        <div class="haha">在职</div>
+         <div class="hehe h">学生</div>
+        </div>
+        
+        <div class="center-one two ">身份</div>
+        
+       
+        <div class="testi kkk">请上传工牌、名片、劳动合同、<br>在职证明，四选一即可</div>
+        <div class="center-one zujin ">上传附件</div>
+       
+         <div class="testj"></div>
+        <input type="file" class="testk" >
+        <div class="center-one mon ">身份证
+        <input type="text" class="test1 bold"  placeholder="需看清身份证信息">
+        </div>
+         <div class="test4"></div>
+        <input type="file" class="test3" >
+    </div>
+     
+     
+     
+      <div class="last">下一步</div>
+      
+      
+</body>
+</html>
+<script src="js/jquery.min.js"></script>
+<script>
+$(function(){
+    $(".haha").click(function(){
+        if($(this).hasClass(".h")){
+            $(this).removeClass(".h")
+        }else{
+            $(this).addClass(".h")
+        }
+    })
+})
+</script>

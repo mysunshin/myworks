@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        
+        html, body{
+            height: 100%;
+            overflow: hidden;
+        }
+        
+        
+        .snake{
+            width:100px;
+            height:100px;
+            background:url("images/snake.png");
+            position:absolute;
+            left:0;
+            top:0;
+        }
+        
+        
+        .food{
+            width:100px;
+            height:100px;
+            background:url(images/food.png);
+            position:absolute;
+            left:300px;
+            top:300px;
+        }
+        
+    
+    </style>
+</head>
+<body>
+   <div class="snake"></div>
+ <div class="food"></div>
+</body>
+</html>
+<script src="js/jquery.min.js"></script>
+<script>
+$(function(){
+    $(document).keydown(function(e){
+    var w_w = $(window).width();
+    var w_h = $(window).height();
+    
+    var sx=$(".snake").offset().left;
+    var sy=$(".snake").offset().top;
+    var srx=sx+$(".snake").width();
+    var sry=sy+$(".snake").height();
+    
+    
+    var fx=$(".food").offset().left;
+    var fy=$(".food").offset().top;
+    var frx=fx+$(".food").width();
+    var fry=fy+$(".food").height();
+     
+    var space=10;
+    
+    $(window).resize(function(){
+        w_w = $(window).width();
+        w_h = $(window).height(); 
+       if(sx>w_w-srx){
+           sx=w_w-srx;
+       } else if(sy>w_h-sry){
+            sy=w_h-sry;
+       } else if(sx > w_w-srx  && sy>w_h-sry){
+           sx=w_w-srx;
+           sy=w_h-sry;
+       }   
+        $(".snake").css({"top":sy,"left":sx});
+    })
+    
+     
+        var code = e.keyCode;
+       if(srx<fx||sry<fy||sx>frx||sy>fry){
+        
+        switch(code){
+            case 38:
+                if(sy< 0){
+                    sy = 0;
+                } else {
+                    sy -= space;
+                }
+                $(".snake").css({"top":sy,"left":sFFx});
+            break;  
+            case 39:
+                if(sx > w_w - srx){
+                   sx = w_w - srx;
+                } else {
+                    sx += space;
+                }
+                
+                $(".snake").css({"top":sy,"left":sx});
+            break;
+            case 40:
+                if(sy > w_h - sry){
+                    sy = w_h - sry;
+                } else {
+                    sy += space;
+                }
+                
+                $(".snake").css({"top":sy,"left":sx});
+            break;
+            case 37:
+                
+                if(sx < 0){
+                    sx = 0;
+                } else {
+                    sx -= space;
+                }
+               $(".snake").css({"top":sy,"left":sx});
+            break;
+            default:
+              
+            break;    
+        }           
+           
+           
+       }else {
+        
+           $(".snake").css({"width": 200 +"px" })
+           $(".food").fadeOut();
+       } 
+        
+        
+    })
+})
+
+
+</script>

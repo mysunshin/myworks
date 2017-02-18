@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        
+        html,body{
+            overflow: hidden;
+        }
+    
+        
+        .test{
+            width:100%;
+            height:50px;
+            margin-left: 450px;
+            font-family: "Microsoft YaHei";
+            text-align: center;
+            cursor: pointer;
+        }
+        
+        .test1{
+            width:100px;
+            height:40px;
+            border:1px solid #333;
+            float: left;
+            margin: 0 10px;
+            text-align: center;
+            line-height: 40px;
+            border-radius: 20px;
+            -webkit-border-radius: 20px;
+            -o-border-radius: 20px;
+            -moz-border-radius: 20px;
+            -ms-border-radius: 20px;
+        }
+        
+        .test2{
+            width:100%;
+            height:100%;
+            margin: 0 auto;
+        }
+        
+        
+        
+       .test1.h{
+            background:#ec6c00;
+            color:#fff;
+            border:1px solid #ec6c00;
+        }
+    
+        
+        .img{
+            width:100%;
+            height:824px;
+            font-size: 100px;
+            text-align: center;
+            line-height: 824px;
+            overflow: hidden;
+        }
+        
+        
+        .bg{
+            background:url("image/111.png")no-repeat center;
+            display: none;
+            }
+        
+        .h{
+            display: block;
+        }
+        
+        
+    </style>
+</head>
+<body>
+  
+    <div class="test">
+        <div class="test1 h">江宁</div>
+        <div class="test1">浦口</div>
+        <div class="test1">建邺</div>
+        <div class="test1">雨花台</div>
+        <div class="test1">仙林</div>
+    </div>
+    <div class="img">
+    <div class="bg h">1</div>
+    <div class="bg">2</div>
+    <div class="bg">3</div>
+    <div class="bg">4</div>
+    <div class="bg">5</div>
+    </div>
+ 
+</body>
+</html>
+<script src="js/jquery.min.js"></script>
+<script>
+$(function(){
+    
+    $(".test1").click(function(){
+       var i=$(this).index(); 
+        $(".test1").eq(i).addClass("h").siblings(".test1").removeClass("h");
+        $(".bg").eq(i).show().siblings(".bg").hide();
+        
+        
+    })
+    
+
+    
+    
+})
+
+
+</script>

@@ -1,0 +1,104 @@
+*{
+    padding: 0px;
+    margin: 0px;
+}
+
+
+
+html,body{
+    font-family: "微软雅黑";
+    background:#ffffff;
+}
+
+
+input{
+    border:none;
+    outline: none;
+}
+
+
+
+.test{
+    width:auto;
+    height:41px;
+    background:#43ccf0;
+    text-align: center;
+    line-height: 41px;
+    font-size: 16px;
+    color: #fff;
+    overflow: hidden;
+    
+}
+
+
+.huadong{
+    width:20px;
+    height: 20px;
+    background:url("../images/1.png")no-repeat right;
+    float: left;
+    margin-top: 10px;
+}
+
+
+.center_last{
+    width:auto;
+    height:100%;
+    background:#fff;
+}
+
+.center_top{
+    padding-top:10px;
+}
+
+
+.pass-one{
+    width:auto;
+    height:43px;
+    color:#3f557a;
+    margin: 0 20px;
+    font-size: 12px;
+}
+
+
+.pass-last{
+    width:auto;
+    height:40px;
+    color: #999999;
+    font-size: 12px;
+    margin: 0 20px;
+}
+
+.box-one{
+    width:auto;
+    height:40px;
+    margin-top: 10px;
+    border-bottom:1px solid #e2e2e2;
+    border-top:1px solid #e2e2e2; 
+}
+
+.center{
+    width:auto;
+    height:40px;
+    margin: 0px 20px;
+}
+
+.left{
+    width:50%;
+    height:40px;
+    font-size: 12px;
+    color:#8bb0ba;
+    text-align: center;
+    line-height: 40px;
+    border-right: 1px solid #e2e2e2;
+}
+
+.right{
+    width:50%;
+    height:40px;
+    float: right;
+    font-size: 12px;
+    color:#8bb0ba;
+    text-align: center;
+    line-height: 40px;
+        
+}

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+    .a{
+            width:14px;
+            height:14px;
+            background:pink;
+            border-radius: 7px;
+            -webkit-border-radius: 7px;
+            -o-border-radius: 7px;
+            -ms-border-radius: 7px;
+            -moz-border-radius: 7px;
+            float: left;
+            margin: 0 5px 10px;
+        }
+        
+        
+        .b{
+            width:14px;
+            height:14px;
+            background:purple;
+            border-radius: 7px;
+            -webkit-border-radius: 7px;
+            -o-border-radius: 7px;
+            -ms-border-radius: 7px;
+            -moz-border-radius: 7px;
+            float: left;
+            margin: 0 5px  10px;
+        }
+        
+        .test{
+            width:168px;
+            height:240px;
+            border:1px solid black;
+            margin: 0 auto;
+        }
+    
+    </style>
+</head>
+<body>
+   <div class="test"></div> 
+</body>
+</html>
+<script src="js/jquery.min.js"></script>
+<script>
+$(function(){
+    
+    var arr = [
+                
+                    [0,0,1,1,1,0,0],
+                    [0,1,1,0,1,1,0],
+                    [1,1,0,0,0,1,1],
+                    [1,1,0,0,0,1,1],
+                    [1,1,0,0,0,1,1],
+                    [1,1,0,0,0,1,1],
+                    [1,1,0,0,0,1,1],
+                    [1,1,0,0,0,1,1],
+                    [0,1,1,0,1,1,0],
+                    [0,0,1,1,1,0,0]
+                
+               ];
+    
+    for(var i=0 ; i<arr.length; i++){
+        for( var j=0 ;j<arr[i].length;j++){
+            if(arr[i][j]==0){
+                $(".test").append("<div class='a'></div> ")
+            }else{
+                 $(".test").append("<div class='b'></div> ")
+            }
+        }
+    }
+    
+    
+    
+    
+    
+    
+    
+})
+
+</script>

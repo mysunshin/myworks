@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        *{
+            padding:0;
+            margin: 0;
+        }
+        
+        html,body{
+            font-size:50px;
+            font-family: "微软雅黑";
+            line-height: 300px;
+            text-align: center;
+            
+        }
+        
+        .test-boss{
+            width:300px;
+            height:300px;
+            transform-style: preserve-3d;
+            transform: perspective(800px);
+            position:relative;
+            transition: transform 5s linear 0s;
+            margin-top: 200px;
+            margin-left: 200px;
+            animation-name: test-boss;
+            animation-iteration-count: infinite;
+            animation-delay: 0s;
+            animation-duration: 5s;
+            animation-timing-function: linear;
+              
+        }
+        
+        @keyframes test-boss{
+            0%{
+            transform: rotate3d( 0,0,1,45deg);
+            }
+            10%{
+                transform:rotate3d(0,1,1,90deg);
+            }
+            20%{
+                transform:rotate3d(0,1,0,180deg);
+            }
+            30%{
+            transform: rotate3d( 1,0,1,45deg);
+            }
+            40%{
+                transform:rotate3d(1,1,1,90deg);
+            }
+            50%{
+                transform:rotate3d(1,1,0,180deg);
+            }
+        }
+       .test-boss .test{
+            width:300px;
+            height:300px;
+           -webkit-border-radius:150px;
+            position:absolute;
+            top:0;
+            left:0;
+        }    
+        
+        
+        .test:nth-child(1){
+           background-image:linear-gradient(270deg, red, green,blue);
+            transform:translateZ(-150px);
+            color:aqua;
+        }
+        
+        .test:nth-child(2){
+           background-image:linear-gradient(270deg, red,black, blue);
+            transform:translateZ(150px);
+            color:palevioletred;
+        }
+        
+        .test:nth-child(3){
+           background-image:linear-gradient(270deg,purple,pink, yellow);
+            transform:translateX(-150px) rotatey(90deg);
+            color:brown;
+        }
+        .test:nth-child(4){
+           background-image:linear-gradient(270deg, blue,red,yellow);
+            transform:translateX(150px) rotatey(90deg);
+            color:palegreen;
+        }
+        
+         .test:nth-child(5){
+            background-image:linear-gradient(270deg, black,yellow,green);
+            transform:translateY(-150px) rotatex(90deg);
+             color:darkgreen;
+        }
+         .test:nth-child(6){
+           background-image:linear-gradient(270deg, red, blue,orange);
+            transform:translateY(150px) rotatex(90deg);
+             color:bisque;
+        }
+        
+        
+        
+        .test-boss:hover{
+            transform: rotate3d( 1,1,1,270deg)
+        }
+    </style>
+</head>
+<body>
+   
+    <div class="test-boss">
+   <div class="test">how</div> 
+   <div class="test">school</div>
+   <div class="test">love</div>
+   <div class="test">one</div>
+   <div class="test">do</div>
+   <div class="test">you</div>
+   </div>
+</body>
+</html>

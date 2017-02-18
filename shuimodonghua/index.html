@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/css.css">
+</head>
+<body>
+    <div class="birds"></div>
+    <div class="left"></div>
+    <div class="right"></div>
+    <div class="center"></div>
+    <div class="last"></div>
+    <div class="span">jquery实现水墨风格动画</div>
+</body>
+</html>
+<script src="js/jquery.min.js"></script>
+<script>
+$(function(){
+    
+    
+    
+    var win=$(window).width();
+    var i = win;
+    function time01 (){
+       set01 = setInterval(function(){
+        if(i>-win){
+            i-=2;
+            $(".birds").css({"left": i+"px"});
+        }else{
+            clearInterval(set01)
+        }
+    },1000/24); 
+         
+    }
+   time01();
+        
+    
+    var l=0;
+    var set02;
+    function time02(){
+    set02=setInterval(function(){
+        if(l<win/2){
+            l++;
+            $(".left").css({"left":-l+"px"});
+            $(".right").css({"right":-l+"px"});
+        }else{
+            clearInterval(set02);
+        }
+    
+},1000/24)   
+    }
+time02();
+   
+    var m=10;
+    var set03;
+    function time03(){
+     set03=setInterval(function(){
+        if(m<35){
+            m+=0.04;
+            $(".center").css({"background-size":m+"%"})
+        }else{
+            time04();
+            clearInterval(set03);
+        }
+    },1000/24)   
+    }
+    time03();
+    
+    
+    var n= 35;
+    var k=70;
+    var set04;
+    function time04(){
+        set04=setInterval(function(){
+            if(n>25){
+            n-=0.04;
+            k-=0.02;
+            $(".center").css({"background-size":n+"%"})
+        }else{
+            clearInterval(set04);
+            setTimeout(function(){
+                $(".span").fadeIn(2000);
+            },2000)
+        }
+        },1000/24)
+        
+    }
+    
+    var p=70;
+    var set05;
+    function time05(){
+    set05=setInterval(function(){
+        if(p<100){
+            p+=0.1;
+            $(".last").css({"backgrounds-size":p+"%"})
+        }else{
+            clearInterval(set05);
+        }
+    },1000/24)
+    }
+    
+    time05();
+    
+    
+    
+    
+    
+    })
+
+
+</script>

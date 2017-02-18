@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>另付房租办理3</title>
+    <link rel="stylesheet" href="css.css/css2.css">
+</head>
+<body>
+    <div class="test">爱租哪&nbsp;&nbsp;&nbsp;
+    <div class="huadong"></div>
+    </div>
+    
+    <div class="test-first">
+        <div class="img fr">
+            <div class="img-three "></div>
+            <span>审核</span>
+        </div>
+        <div class="img  fl">
+            <div class="img-one">
+                <div class="true"></div>
+            </div>
+            <span>身份信息</span>
+        </div>
+        <div class="img img_two">
+            <div class="img-two"></div>
+            <span>租房资料</span>
+        </div> 
+            <div class="arrow-con">
+                <div class="arrow"></div>
+                <div class="arrow-one"></div>
+            </div>
+    </div>
+    
+    <div class="center">
+        <div class="center-one one">租约开始日
+        <input type="date" class="test2" value="2015-10-10">
+        </div>
+        <div class="center-one two">租期
+        <input type="text" class="test1"  placeholder="请输入身份证号码">
+        </div>
+        <div class="center-one mon">月租金
+        <input type="text" class="test1"  placeholder="请输入常用银行卡卡号">
+        </div>
+        <div class="center-one zujin">租金总额</div>
+        <div class="center-one zujin">分期金额</div>
+        <div class="center-one zujin">分期期数</div>
+        <div class="center-one ">业务手机经理
+        <input type="text" class="test1"  placeholder="联系公寓联系人手机号码">
+        </div>
+        <div class="center-one zujin">房租合同
+        <input type="text" class="test1"  placeholder="需看清合同信息">
+        <div class="test4"></div>
+        <input type="file" class="test3" >
+        </div>
+    </div>
+    
+    
+    <div class="lll">
+      <div class="agreen">同意</div>
+      <a href="" class="aizu">《爱租月付服务会员协议》</a>
+       <div class="check">
+          <div class="a"></div>
+       </div>
+     
+    </div>
+    
+    <div class="last-one">
+   <input type="button" class="last-two" value="下一步">
+  <div class="last tijiao">提&nbsp;&nbsp;&nbsp;交</div>
+    </div>
+</body>
+</html>
+<script src="js/jquery.min.js"></script>
+<script>
+    $(function(){
+        $(".check").click(function(){
+            if($(this).hasClass("a")){
+                $(this).removeClass("a")
+            }else{
+               $(this).addClass("a")
+            }
+        })
+    })
+</script>

@@ -1,0 +1,275 @@
+.test1{width:100%;
+       height:76px;
+       border-bottom:3px solid #025dac;
+      } 
+.test2{width:980px;
+       height:76px;
+       margin:0 auto;
+    
+      }
+.test3{width:200px;
+       height:40px;
+       padding-top:18px;
+       padding-bottom:18px;
+       display:block;
+       float:left;
+    
+       }
+.test4{width:754px;
+       height:76px;
+       float:left;
+      }
+.test5{width:754px;
+       height:38px;
+       text-align: right;
+       color:#929292;
+       line-height:38px;
+      
+      }
+.test6{width:754px;
+       height:38px;
+       float:left;
+    
+      }
+.test7{width:544px;
+       height:38px;
+       float:left;
+      
+      }
+.font{  width:90px;
+       height:38px;
+       display:block;
+       float:left;
+       text-align: center;
+       line-height: 38px;
+       color:#a2a2a2;
+    }
+.test7 a:hover{
+          background:#2495e9;
+          color:#fdfdfd;}
+a{
+     text-decoration: none;
+ }
+.test8{width:181px;
+       height:38px;
+       float:right;
+      }
+.test10{width:138px;
+     height:26px;
+     border:1px solid #e5e5e5;
+      outline: none;
+      color:#e5e5e5;
+      font-size:12px;
+       padding-left:14px;
+      
+    }
+.test9{width:27px;
+       height:27px;
+       background:url("images/06.png");
+       float:right;
+       }  
+.banner{width:100%;
+      height:579px;
+      margin-top: 0px;
+      background:url("images/banner.png")no-repeat center;
+      background-size: cover;
+    }
+
+.xwboss{
+      width:100%;
+      height:203px;}
+
+.boss{
+    width:980px;
+    height:203px;
+    background:#ffffff;
+    margin: auto;
+    margin-top: -120px; 
+    box-shadow: 2px 4px 6px #dfdfdf;
+   }
+
+.left{
+     width: 293px;
+     height: 178px;
+     margin-top: 17px;
+     margin-left: 25px;
+     float: left;
+}
+.xinwen{
+    color: black;
+    font-family: '微软雅黑';
+    font-size: 14px;
+    font-weight: bold;
+       }
+
+.ng{
+    width: 293px;
+    height: 1px;
+    background: #d9d9d9;
+    margin-top: 6px;
+   }
+
+
+.bk{
+    width: 293px;
+    height: 86px;
+   }
+
+.img{
+    margin-top:10px;
+}
+
+.wenzi{
+     width: 159px;
+     height: 86px;
+     float: right;
+     color: #7a7a7a;
+     font-size: 12px;
+     margin-top: 10px;
+}
+
+.yw{
+     color: #002646;
+     font-size: 12px;
+    
+}
+
+
+.datian{
+    widows: 293px;
+    height: 29px;
+    margin-top: 22px;
+}
+
+.dt{
+    color: #7c7c7c;
+    font-size: 12px;  
+}
+
+.center{
+    width: 293px;
+    height: 178px;
+    margin-top: 17px;
+    margin-left: 25px;
+    float: left;
+}
+
+.today{
+     color: black;
+    font-family: '微软雅黑';
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.day{
+   width: 179px;
+    height: 59px;
+    font-size: 12px;
+    font-family: '微软雅黑';
+    color: #7a7a7a;
+    float: right;
+    margin-top: 6px;  
+}
+
+.td{
+    width: 293px;
+    height: 1px;
+    background: #d9d9d9;
+    margin-top: 6px;
+}
+.kk{
+     width: 293px;
+     height:auto;
+  
+}
+
+.tt{margin-top:5px;
+    float:left;
+    
+}
+.c-bottom{
+   width: 293px;
+    height: 59px;
+}
+.c-top{
+   width: 293px;
+    height: 59px;
+}
+
+.b-nr{
+      width: 179px;
+    height: 59px;
+    font-size: 12px;
+    font-family: '微软雅黑';
+    color: #7a7a7a;
+    float: right;
+    margin-top: 6px;   
+}
+
+
+.right{
+     width: 293px;
+    height: 178px;
+    margin-top: 17px;
+    margin-left: 25px;
+    float: left;
+}
+
+.zuijin{
+    color: black;
+    font-family: '微软雅黑';
+    font-size: 14px;
+    font-weight: bold; 
+}
+.zj{
+    width: 293px;
+    height: 1px;
+    background: #d9d9d9;
+    margin-top: 6px;
+}
+.tupian{
+     width: 293px;
+     height: 59px;
+}
+
+.r-nr{
+    width: 293px;
+    height: 21px;
+    color: #001436;
+    font-size: 12px;
+    font-family: '微软雅黑';
+    margin-top: 6px;
+}
+
+.b-bottom{
+    width: 100%;
+    height: 33px;
+    border-bottom: 1px #ececec solid;
+    border-top: 1px #ececec solid;
+    margin-bottom: 34px;
+    margin-top: 24px;
+    
+}
+.son{
+    width:980px;
+    height: 33px;
+    margin: 0 auto;
+}
+.son-nr{
+    width: 300px;
+    height: 33px;
+    line-height: 33px;
+    color: #666;
+    font-size: 12px;
+    margin-left: 34px; 
+    float: left;
+}
+.b-right{
+    width: 300px;
+    height: 33px;
+    line-height: 33px;
+    color: #b1b1b1;
+    font-size: 12px;
+    margin-right: 13px;
+    float: right;
+}

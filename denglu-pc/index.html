@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/css.css">
+    <link rel="stylesheet" href="css/public.css">
+</head>
+<body>
+    <div class="boss">
+        <div class="see">
+             <a href="" class="img">
+             <img src="images/qie.png" alt=""> 
+             </a>
+             <div class="per">
+             <div class="n-left">
+                 <select>
+                      <option value="1" >南京</option>
+                      <option value="2" >上海</option>
+                      
+                 </select> 
+             </div> 
+             <div class="r-right" >
+                 <span>&nbsp;首页&nbsp;&nbsp;&nbsp;&nbsp;</span>
+                 <span>爱租找房&nbsp;&nbsp;&nbsp;&nbsp;</span>
+                 <span>地图找房&nbsp;&nbsp;&nbsp;&nbsp;</span>
+                 <span>爱租金融</span>
+                     
+             </div>
+             </div>
+             <div class="son">
+                 <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;用户登录</span>
+                 <a href="" class="s-son">|</a>
+                 <span>公寓登陆</span>
+                 <a href="" class="s-son">|</a>
+                 <span class="shouji">&nbsp;手机爱租</span>
+             </div>
+        </div>
+       
+    </div>
+    <div class="img-boss">
+        <div class="img-per">
+          <div class="img-son">
+           <div class="left"></div>
+           <div class="center">欢迎登陆</div>
+           <div class="right"></div>
+           </div>
+           <div class="box">
+              <div class="img-two"></div>
+            <input type="text" class="focus_" placeholder="请输入用户名/手机号/邮箱">
+          </div>
+          
+           <div class="box">
+              <div class="img-three"></div>
+            <input type="password" class="focus_one" placeholder="请输入6-16位密码">
+          </div>
+          <div class="big-box">
+              <div class="b-left">下次自动登录
+                  <input type="checkbox" class="c-box">
+              </div>
+              <div class="b-right">
+                    <a href="" class="font">忘记密码?</a>
+              </div>
+          </div>
+          <div class="denglu">登录</div>
+          <div class="last">
+          <span>没有账号?现在就</span>
+          <a href="">注册</a>
+          </div>
+        </div>
+    </div>
+</body>
+</html>
+<script src="js/jquery.min.js"></script>
+<script>
+$(function(){
+    var val;
+    $("focus_").focus(function(){
+        val=$("focus_").val();
+        if (val=="请输入用户名/手机号/邮箱"){
+            $("focus_").val("")
+        }
+    
+    })
+    
+    $("focus_").blur(function(){
+        val=$("focus_").val();
+        if (val==""){
+            $("focus_").val("请输入用户名/手机号/邮箱")
+        }
+    
+    })
+    
+})
+</script>

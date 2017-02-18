@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        .test1{
+            width:100px;
+            height:100px;
+            background:red;
+            position: absolute;
+            left:0;
+            top:0;
+        }
+        
+        
+        .test2{
+            width:100px;
+            height:100px;
+            background:black;
+            position: absolute;
+            left:400px;
+            top:400px;
+        }
+    
+    </style>
+</head>
+<body>
+    <div class="test1"></div>
+    <div class="test2"></div>
+</body>
+</html>
+<script src="js/jquery.min.js"></script>
+<script>
+ $(function(){
+     $(document).keydown(function(e){
+         var code=e.keyCode;
+         var sx=$(".test1").offset().left;
+         var sy=$(".test1").offset().top;
+         var srx=sx+$(".test1").width();
+         var sry=sy+$(".test1").height();
+         
+         
+         var bx=$(".test2").offset().left;
+         var by=$(".test2").offset().top;
+         var brx=bx+$(".test2").width();
+         var bry=by+$(".test2").height();
+         
+         
+
+         
+            if (srx<bx||sry<by||sx>brx||sy>bry){
+                
+                switch(code){
+                        case 38:
+                        sy-=5;
+                        $(".test1").css({"top":sy+"px"});
+                        break;
+                        case 39:
+                        sx+=5;
+                        $(".test1").css({"left":sx+"px"});
+                        break;
+                        case 40:
+                        sy+=5;
+                        $(".test1").css({"top":sy+"px"});
+                        break;
+                        case 37:
+                        sx-=5;
+                        $(".test1").css({"left":sx+"px"});
+                        break;
+                        default:
+                        break;
+                }
+            }else{
+                $(".test2").fadeOut();
+                $(".test1").css({"width": 200+"px"});
+            }
+         
+         
+         
+         
+         
+         
+     })
+     
+     
+     
+ })
+
+</script>

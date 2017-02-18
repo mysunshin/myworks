@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        .test{
+            width:400px;
+            height:200px;
+            border:1px solid black;
+            position: relative;
+            overflow: hidden;
+            cursor: pointer;
+        }
+          
+        
+        .img{
+            width:400px;
+            height:200px;
+            font-size: 50px;
+            position: absolute;
+            left: 400px;
+            top:0px;
+            z-index:0;
+        }
+        
+        .img:nth-child(1){
+            background:red;
+        }
+        .img:nth-child(2){
+            background:pink;
+        }
+        .img:nth-child(3){
+            background:purple;
+        }
+        .img:nth-child(4){
+            background:green;
+        }
+        
+        
+        
+        .hh{
+            z-index: 1;
+        }
+          
+          .yuand{
+            width:100px;
+            height:20px;
+            position: absolute;
+            float:left;
+            bottom: 20px;
+            left:40%;
+            z-index: 2;
+        }
+          
+          
+        .c{
+            width:14px;
+            height:14px;
+            float:left;
+            background:#fff;
+            margin: 0 2px;
+            border-radius: 7px;
+            -webkit-border-radius:7px;
+            -ms-border-radius:7px;
+            -moz-border-radius:7px;
+            -o-border-radius:7px;
+        }
+        .c.h{
+            background:black;
+        }
+         
+        .left{
+            width:50px;
+            height:50px;
+            color:#fff;
+            line-height: 200px;
+            font-size: 50px;
+            position: absolute;
+            top:0;
+            left: 0;
+            z-index: 1;
+        }
+
+        .right{
+            width:50px;
+            height:50px;
+            color:#fff;
+            line-height: 200px;
+            font-size: 50px;
+            position: absolute;
+            top:0;
+            right:0;
+            z-index: 1;
+        }  
+          
+    </style>
+</head>
+<body>
+    <div class="test">
+       
+        <div class="img h">1</div>
+        <div class="img">2</div>
+        <div class="img">3</div>
+        <div class="img">4</div>
+         
+        <div class="yuand">
+           <div class="c h"></div>
+           <div class="c"></div>
+           <div class="c"></div>
+           <div class="c"></div>
+           
+       </div> 
+       <div class="left"><</div>
+           <div class="right">></div>
+    </div>
+    
+</body>
+</html>
+<script src="js/jquery.min.js"></script>
+<script>
+$(function(){
+    var i=0;
+var set
+  $(".c").eq(i).addClass("h").siblings(".c").removeClass("h");
+  $(".img").eq(i).animate({"left":0},0).addClass("hh");
+    function time(){
+       set=setInterval(function(){
+         if(i<3){
+        i++;
+    }else{
+        i=0;
+    }
+    $(".c").eq(i).addClass("h").siblings(".c").removeClass("h");  
+    $(".img").eq(i).animate({"left":0}).addClass("hh");
+    $(".img").eq(i-1).animate({"left":-400 +"px"}).animate({"left":400+"px"},0).removeClass("hh");
+    },2000) 
+    }
+    
+     time();
+    $(".test").mouseover(function(){
+        clearInterval(set);
+    });
+    $(".test").mouseleave(function(){
+        time();
+    })
+    
+    
+    $(".c").mouseover(function(){  
+    i=$(this).index();
+    $(".c").eq(i).addClass("h").siblings(".c").removeClass("h");  
+    $(".img").eq(i).animate({"left":0}).addClass("hh");
+    $(".img").eq(i).show().siblings(".img").hide();
+    $(this).addClass("h").siblings(".c").removeClass("h"); 
+     
+})
+    
+  $(".left").click(function(){
+      if(i>0){
+            i--;
+        }else{
+            i=3;
+        }
+    $(".c").eq(i).addClass("h").siblings(".c").removeClass("h");  
+    $(".img").eq(i).animate({"left":0}).addClass("hh");
+    $(".img").eq(i-1).animate({"left":-400 +"px"}).animate({"left":400+"px"},0).removeClass("hh");
+  })
+    
+     
+  $(".right").click(function(){
+      if(i<3){
+            i++;
+        }else{
+            i=0;
+        }
+        
+    $(".c").eq(i).addClass("h").siblings(".c").removeClass("h");  
+    $(".img").eq(i).animate({"left":0}).addClass("hh");
+    $(".img").eq(i-1).animate({"left":-400 +"px"}).animate({"left":400+"px"},0).removeClass("hh");
+  })
+     
+})
+    
+
+
+
+</script>

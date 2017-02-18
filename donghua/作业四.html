@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    
+    <style>
+        .test{  
+            width:100px;
+            height:100px; 
+            background: red; 
+            position: absolute;
+            left: 0px; 
+            top: 0px; } 
+    </style>
+
+    
+</head>
+<body>
+   <div class="test"></div> 
+</body>
+</html>
+<script src="js/jquery.min.js"></script>
+<script>
+$(function(){
+    
+    var w_w = $(window).width();
+    var w_h = $(window).height();
+     
+    
+    var test_h=$(".test").height();
+    $(".test").css({"top":(w_h-test_h)/2+"px"})
+    
+    var test_w=$(".test").width();
+    $(".test").css({"left":(w_w-test_w)/2+"px"})
+    
+    
+    
+    /*$(window).resize(function(){
+      w_h= $(window).width();
+      test_h=$(".test").height();
+      $(".test").css({"top":(w_h-test_h)/2+"px"})
+    })*/
+    
+    
+    
+    
+})
+
+
+
+
+</script>

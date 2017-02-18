@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		*{
+			padding: 0;
+			margin: 0;
+		}
+		
+		.can{
+			background: url("bg.jpg") no-repeat;
+            margin-left: 300px;
+		}
+	</style>
+</head>
+<body>
+	<canvas class="can" width="800" height="600"></canvas>
+</body>
+</html>
+<script src="buyudaren.js"></script>
+<script>
+var can = document.querySelector(".can");
+var pen = can.getContext("2d");
+var fish=[];
+var bullet=[];
+var arr = ["fish.png","cannon1.png","bullet1.png"];
+
+var cannon={
+   x:350,
+   y:500,
+   space:5
+    }; 
+
+   
+    
+    window.onkeydown = function(e){
+        switch(e.keyCode){
+            case 37:
+                if(cannon.x>cannon.space){
+                    cannon.x-=cannon.space;
+                }
+            break;
+                
+            case 39:
+                if(cannon.x<726-cannon.space){
+                    cannon.x+=cannon.space;
+                }
+            break;
+                
+            case 32:
+              	bullet.push({
+				x: cannon.x + 25,
+				y: cannon.y,
+				space: 5
+			});
+            break;
+        }
+    }
+    
+    
+    setInterval(function(){
+        fish.push({
+            x:-174,
+            y:Math.random()*400,
+            space:3,
+            i:0
+        });
+    },3000)
+    
+    
+    
+	lazyload(arr, function(imgs){
+		setInterval(function(){
+			pen.clearRect(0, 0, 800, 600);
+            
+            //绘制鱼
+            for(var j=0;j<fish.length;j++){
+                fish[j].i++;
+			if(fish[j].i == 8){
+				fish[j].i = 0;
+			}
+			pen.drawImage(imgs.fish, 0, fish[j].i*126, 174, 126, fish[j].x +=fish[j].space, fish[j].y, 174, 126);
+            }
+            //绘制炮弹
+            	for(var h = 0; h <bullet.length; h++){
+				pen.drawImage(imgs.bullet1, 0, 0, 25, 29, bullet[h].x, bullet[h].y -= bullet[h].space, 25, 29);
+                if(bullet[h].y <= -29){
+					bullet.splice(h, 1);
+				}
+			}
+            //绘制炮台
+             pen.drawImage(imgs.cannon1, 0, 0, 74, 74, cannon.x, cannon.y, 74, 74);
+            
+            
+            //碰撞检测
+            
+            for(var n = 0; n < bullet.length; n++){// 遍历炮弹
+				for(var m = 0; m < fish.length; m++){ // 遍历鱼
+					if(touch(bullet[n].x, bullet[n].y, 25, 29, fish[m].x, fish[m].y, 174, 100)){
+						bullet.splice(n, 1);
+						fish.splice(m, 1);
+					}
+					
+				}
+			}
+		}, 1000/24);		
+	});
+</script>

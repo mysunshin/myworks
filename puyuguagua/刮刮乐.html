@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        .test{
+            width: 200px;
+            height: 50px;
+            background: red;
+            text-align: center;
+            line-height: 50px;
+            font-size: 18px;
+        }
+        
+        .can{
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+    </style>
+</head>
+<body>
+   <div class="test">恭喜你中奖了</div>
+    <canvas class="can" width="200" height="50"></canvas>
+</body>
+</html>
+<script>
+    var test=document.querySelector(".test");
+    var can=document.querySelector(".can");
+    var pen=can.getContext("2d");
+    pen.fillStyle="#cccccc";
+    pen.fillRect(0,0,200,50);
+    
+    can.onmousemove=function(e){
+        pen.clearRect(e.pageX,e.pageY,e.pageX+10,e.pageY+10)
+    }
+    
+    var arr=["泥奏凯没中奖","中奖了呦","今天运气不错"];
+    
+    test.innerHTML=arr[Math.floor(Math.random()*arr.length)];
+</script>

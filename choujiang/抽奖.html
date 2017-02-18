@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        .banner{
+            width:452px;
+            height:452px;
+            background:url("imges/banner.png")no-repeat;
+            margin: 100px auto;
+            position: relative;
+        }
+        
+        .banner_{
+            width:89px;
+            height:128px;
+            background:url("imges/chou.png")center no-repeat;
+            position: absolute;
+            left:226px;
+            top:226px;
+            margin-left: -45px;
+            margin-top: -64px;
+        }
+    </style>
+</head>
+<body>
+    <div class="banner">
+        <div class="banner_"></div>
+    </div>
+</body>
+</html>
+<script src="js/jquery.min.js"></script>
+<script>
+$(function(){
+     var status = 0;
+    
+    $(".banner_").click(function(){
+        if(status == 0){
+            status = 1;
+            move();            
+        }
+
+    })
+    
+    
+    function move(){
+        var ran = Math.random()*360;
+        var i = 0;
+        var set = setInterval(function(){
+            if(i < ran){
+                i++;
+                $(".banner_").css({"transform": "rotateZ("+ i +"deg)"});
+            } else {
+                clearInterval(set);
+                status = 0;
+            }
+        }, 1000/24)        
+    }
+})
+</script>
